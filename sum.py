@@ -4,7 +4,7 @@ def sum_1(n):
     this method returns the sum from 0 to n
     """
     sum = 0
-    for x in xrange(n+1):
+    for x in range(n+1):
         sum +=x
 
     return sum
