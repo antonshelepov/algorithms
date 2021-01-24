@@ -29,3 +29,7 @@ def anagram(s,t):
             return False
 
     return True
+
+if __name__ == "__main__":
+
+    print(anagram("dog","god"))
