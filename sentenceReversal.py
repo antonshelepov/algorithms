@@ -1,12 +1,5 @@
 from nose.tools import assert_equal
 
-def sent_rev(sent):
-
-    words = sent.split(" ")
-    words = [w.strip() for w in words if w]
-
-    return words[::-1]
-
 def sent_rev2(sent):
 
     return " ".join(reversed(sent.split()))
@@ -15,6 +8,32 @@ def sent_rev3(sent):
 
     return " ".join(sent.split()[::-1])
 
+def sent_rev(sent):
+    """ Manually doing the splits on the spaces
+    """
+    words = []
+    length = len(sent)
+    spaces = [" "]
+
+    # Index Tracker
+    i = 0
+    while i < length:
+
+        if sent[i] not in spaces:
+
+            # index at which a word starts
+            word_start = i
+             
+            while i < length and s[i] not in spaces:
+
+                # iterate to the end of a word
+                i +=1
+
+            words.append(s[word_start:i])
+        
+        i +=1
+
+    return " ".join(reversed(words))
 
 if __name__ == "__main__":
 
