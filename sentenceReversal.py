@@ -24,12 +24,12 @@ def sent_rev(sent):
             # index at which a word starts
             word_start = i
              
-            while i < length and s[i] not in spaces:
+            while i < length and sent[i] not in spaces:
 
                 # iterate to the end of a word
                 i +=1
 
-            words.append(s[word_start:i])
+            words.append(sent[word_start:i])
         
         i +=1
 
