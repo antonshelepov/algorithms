@@ -4,31 +4,32 @@ import pprint
 def compress(item):
     
     length = len(item)
-    if l == 0:
+    if length  == 0:
         return ""
-    if l == 1:
+    if length == 1:
         return item
     
     counter = {}
 
-    for i in item.split():
-        if i not in counter:
+    for i in item:
+        if i in counter:
             counter[i] +=1
         else:
             counter[i] =1
 
-    return counter
+    compressed = "".join(key + str(val) for key, val in counter.items())
+
+    return compressed
 
 
-pprint.pprint(compress("AAAaaB")
-#class TestCompress(object):
-#
-#    def test(self, sol):
-#        assert_equal(sol(''), '')
-#        assert_equal(sol('AABBCC'), 'A2B2C2')
-#        assert_equal(sol('AAABCCDDDD'), 'A3B1C2D5')
-#        print("all tests passed")
-#
-#
-#t = TestCompress()
-#t.test(compress)
+class TestCompress(object):
+
+    def test(self, sol):
+        assert_equal(sol(''), '')
+        assert_equal(sol('AABBCC'), 'A2B2C2')
+        assert_equal(sol('AAABCCDDDD'), 'A3B1C2D4')
+        print("all tests passed")
+
+
+t = TestCompress()
+t.test(compress)
