@@ -1,3 +1,5 @@
+# Last in first out 
+
 class Stack(object):
 
     def __init__(self):
@@ -17,6 +19,9 @@ class Stack(object):
 
     def size(self):
         return len(self.items)
+
+    def show(self):
+        return items
 
 s = Stack()
 s.push(5)
