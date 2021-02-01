@@ -21,7 +21,7 @@ class Stack(object):
         return len(self.items)
 
     def show(self):
-        return items
+        return self.items
 
 s = Stack()
 s.push(5)
@@ -29,3 +29,4 @@ s.push("eleven")
 print(s.isEmpty())
 print(s.size())
 print(s.peek())
+print(s.show())
