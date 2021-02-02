@@ -34,6 +34,7 @@ def balance_check(item):
 class TestBalanceCheck(object):
         
     def test(self,sol):
+        assert_equal(sol('no par here'), False)
         assert_equal(sol('[](){([[[]]])}('),False)
         assert_equal(sol('[{{{(())}}}]((()))'),True)
         assert_equal(sol('[[[]])]'),False)
