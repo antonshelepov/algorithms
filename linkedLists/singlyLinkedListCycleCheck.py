@@ -9,7 +9,20 @@ class Node(object):
         self.value = value
         self.nextnode = None
 
+def cycle_check(node):
 
+    mark1 = node
+    mark2 = node
+
+    while mark1 != None and mark2.nextnode != None:
+
+        mark1 = mark1.nextnode
+        mark2 = mark2.nextnode.nextnode
+
+        if mark2 == mark1:
+            return True
+
+    return False
 
 # CREATE CYCLE LIST
 a = Node(1)
