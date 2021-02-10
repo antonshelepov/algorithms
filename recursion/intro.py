@@ -17,4 +17,12 @@ def sum_func(n):
         return n%10 + sum_func(int(n/10))
     pass
 
+def word_split(phrase,wordList,output = None):
+    if output is None:
+        output = []
 
+    for word in wordList:
+        if phrase.startswith(word):
+            output.append(word)
+            word_split(phrase[len(word):], wordList, output)
+    return output
