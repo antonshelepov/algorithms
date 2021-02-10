@@ -11,6 +11,18 @@ def fib_rec(n):
     else:
         return fib_rec(n-1) + fib_rec(n-2)
 
+def fib_iter(n):
+    '''iterative method for fibo sequence
+    '''
+    a = 0
+    b = 1
+
+    for i in range(n):
+
+        a, b = b, a + b
+
+    return a
+
 class TestFib(object):
         
     def test(self,solution):
@@ -25,3 +37,4 @@ t = TestFib()
 t.test(fib_rec)
 #t.test(fib_dyn)
 #t.test(fib_iter)
+print(fib_rec(8))
