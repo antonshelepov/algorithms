@@ -1,5 +1,7 @@
 # given a str, write a function that uses recursion to output a list of all possible permutations of that str
 
+from nose.tools import assert_equal
+
 def permute(s):
 
     out = []
@@ -16,8 +18,6 @@ def permute(s):
 
     return out
 
-from nose.tools import assert_equal
-
 class TestPerm(object):
         
     def test(self,solution):
@@ -32,3 +32,5 @@ print('All test cases passed.')
 # Run Tests
 t = TestPerm()
 t.test(permute)
+
+#print(permute("anton"))
