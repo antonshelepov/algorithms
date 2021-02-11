@@ -1,4 +1,5 @@
 # Implementation of Fibonnaci Sequence in three differen ways
+# https://technobeans.com/2012/04/16/5-ways-of-fibonacci-in-python/
 
 from nose.tools import assert_equal
 
@@ -17,7 +18,7 @@ def fib_iter(n):
     a = 0
     b = 1
 
-    for i in range(n):
+    for _ in range(n):
 
         a, b = b, a + b
 
@@ -37,4 +38,4 @@ t = TestFib()
 t.test(fib_rec)
 #t.test(fib_dyn)
 #t.test(fib_iter)
-print(fib_rec(8))
+print(fib_rec(6))
