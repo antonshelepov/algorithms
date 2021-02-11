@@ -26,7 +26,7 @@ def fib_iter(n):
 
 #-->
 
-n = 10
+n = 18
 cache = [None] * (n + 1)
 
 def fib_dyn(n):
@@ -58,4 +58,4 @@ t = TestFib()
 #t.test(fib_rec)
 t.test(fib_dyn)
 #t.test(fib_iter)
-print(fib_rec(6))
+#print(fib_rec(6))
