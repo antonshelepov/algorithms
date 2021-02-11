@@ -1,6 +1,12 @@
 # Given a target amount n and a list of distinct coin values, what is the fewest coins needed to make the change amount
 
+def coin_rec(target,coins):
 
+    pass
+
+def coin_dyn(target,coins,known_results):
+
+    pass
 
 from nose.tools import assert_equal
 
